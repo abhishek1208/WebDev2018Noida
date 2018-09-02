@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+</head>
+<body>
+ <button id="btn">Start</button>
+<ul id="list">
+    <li>Get some water</li>
+</ul>
+<script>
+    let submitbtn=document.getElementById("btn");
+    let tasklist=document.getElementById("list");
+
+    submitbtn.onclick=function () {
+        let startTime=new Date().getTime();
+        let str="";
+        for(let i=1;i<1000;++i){
+            str+="<li>"+i+"</li>";
+        }
+        tasklist.innerHTML+=str;
+        let endTime=new Date().getTime();
+        console.log(endTime-startTime);
+
+    }
+</script>
+
+</body>
+</html>

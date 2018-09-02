@@ -1,0 +1,6 @@
+/*The second and third div both will be red, because they are the general sibling, does not matter
+if they are adjacent or not
+So that's why even if p is in middle of the last two divs, it does not affect the styling of color red*/
+div ~ div{
+    color:red;
+}

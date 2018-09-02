@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="box"> <button id="btn">ADD</button>
+<ul id="list">
+    <li>Get some water</li>
+</ul>
+<script>
+    let inputbox=document.getElementById("box");
+    let submitbtn=document.getElementById("btn");
+    let tasklist=document.getElementById("list");
+
+    submitbtn.onclick=function () {
+//        Using innerHtml
+        let task=inputbox.value;
+        tasklist.innerHTML+="<li>"+task+"</li>";
+
+//        Manipulating Dom by creating new element
+//        let newTask=document.createElement("li");
+//        newTask.innerText=task;
+//        tasklist.appendChild(newTask)
+    }
+</script>
+
+</body>
+
+</html>

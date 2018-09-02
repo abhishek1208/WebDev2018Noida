@@ -1,0 +1,50 @@
+div{
+    margin:20px;
+    padding:20px;
+    background-color: orange;
+    border: 2px solid black;
+}
+/*TO check out different positions, comment out the relevant part */
+
+/*Sticky might not work in all browsers*/
+
+/* For relative positioning,
+the position is changed in relation to the position it would
+have acquired in normal flow
+ */
+
+/*
+#div2{
+    position: relative;
+    top:20px;
+}
+*/
+
+
+/*For absolute positioning,
+the ancestor must have a position(other than static)
+Here we have positioned div3 absolute and it's ancestor
+is div2 which has relative position*/
+
+/*
+#div2{
+    position: relative;
+}
+
+#div3{
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+
+*/
+
+/* In fixed positioning, the div will stay in the position
+acquired in the DOM and scrolling will not affect it's position
+ */
+
+/*
+#div3{
+   position:fixed;
+}
+*/

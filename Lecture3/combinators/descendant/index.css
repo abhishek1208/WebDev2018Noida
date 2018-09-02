@@ -1,0 +1,14 @@
+/* Here normally, the li item has color green */
+
+li{
+    color:green;
+}
+
+/*
+Here all the li items would change the color to darkcyan, and would be trumping the previous
+rule to be green since this has more specificity
+*/
+
+ol li{
+    color:purple;
+}

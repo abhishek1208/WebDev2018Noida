@@ -1,0 +1,19 @@
+/* Here normally, the li item has color green */
+
+li{
+    color:green;
+}
+
+/* When this style is applied, all the direct li children of ul change color to red
+But 'one point one' and 'one point two' won't change the color since they are not direct children */
+ul>li{
+    color:red
+}
+
+
+
+ul li{
+
+}
+
+

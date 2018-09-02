@@ -1,0 +1,21 @@
+#div1{
+    width: 80px;
+    height:80px;
+    margin: 10px;
+    background-color: orange;
+}
+
+#div2{
+    width: 40px;
+    height:40px;
+    background-color: red;
+    margin:10px;
+}
+
+#div1:hover + div{
+    background-color: blue;
+    height:100px;
+    transition: background 4s,height 4s;
+}
+
+

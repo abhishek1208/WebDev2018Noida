@@ -1,0 +1,17 @@
+div{
+    margin-top: 25px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#div1{
+    background-color: lightcoral;
+}
+
+#div2{
+    background-color: lightblue;
+}
+
+#div3{
+    background-color: lightgreen;
+}

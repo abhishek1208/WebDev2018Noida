@@ -1,0 +1,5 @@
+/*Will color the second div since it's the adjacent sibling*/
+
+div + div {
+    color: red;
+}

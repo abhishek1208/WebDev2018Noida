@@ -1,0 +1,49 @@
+div{
+    background-color: blue;
+    width: 40px;
+    height:40px;
+    margin:20px;
+}
+
+
+/* This will change margin left from 40px to 100px*/
+@keyframes mynewkf {
+    from{
+        margin-left: 40px;
+    }
+    to{
+        margin-left: 100px;
+    }
+}
+
+/* In this keyframe, if duration is 4 secs, in the first 2 secs(0%-50%), the margin will change from
+40px to 90px, and in the last 2 secs(50%-100%), margin will change from 90px to 100px and thus
+the movement will be slower
+ */
+@keyframes mynewkf2 {
+    0%{
+        margin-left: 40px;
+    }
+    50%{
+        margin-left: 90px;
+    }
+    100%{
+        margin-left: 100px;
+}
+
+
+}
+
+#div1:hover + div{
+    animation-name: mynewkf;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+}
+
+
+#div3:hover + div{
+    animation-name: mynewkf2;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+
+}

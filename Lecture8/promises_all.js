@@ -61,3 +61,6 @@ Promise.all([
     .then(function (uploadValues) {
         console.log(uploadValues)
     })
+    .catch(function (err) {
+        console.log(err);
+    })

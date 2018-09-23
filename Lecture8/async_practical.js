@@ -16,7 +16,7 @@ function resize(filePath, done) {
         let resizedFilePath = filePath.split('.')[0] + "-resized." + filePath.split('.')[1];
         console.log("The resizing has been completed!");
         done(resizedFilePath)
-    }, 3000);
+    }, 5000);
 }
 
 function upload(filePath, done) {
@@ -26,13 +26,16 @@ function upload(filePath, done) {
         let uploadPath = "https://mysite.com/uploads/" + filePath.split('/').pop();
         console.log("The uploading has been completed!");
         done(uploadPath);
-    }, 3000);
+    }, 8000);
 }
 
 downloadFile("https://mysite.com/logo.png", function (downloadResult) {
     console.log("The resulting download path is " + downloadResult);
     resize(downloadResult, function (resizeResult) {
         console.log("The resulting resized path is " + resizeResult);
+        upload(resizeResult, function (uploadPath) {
+            console.log("The upload path is " + uploadPath)
+        })
     })
 
 });

@@ -14,6 +14,10 @@ srv.get('/abc/:id', (req, res, next) => {
     res.send("The id is " + req.params.id);
 });
 
+srv.get('/greet/:name', (req, res, next) => {
+    res.send("Good morning " + req.params.name);
+})
+
 srv.get('/html', (req, res, next) => {
     res.send(`<html>
 <h1>Welcome to my site</h1>

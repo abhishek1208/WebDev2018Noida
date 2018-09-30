@@ -6,14 +6,16 @@ const teachers = [
     {name: "Anuj", course: "Cplusplus"}
 ]
 
+router.get('/:id',(req,res)=>{
+
+    res.send(teachers[req.params.id])
+})
 
 router.get('/', (req, res) => {
     res.send(teachers);
 })
 
 
-router.get('/:id',(req,res)=>{
-    res.send(teachers[req.params.id])
-})
+
 
 module.exports = router

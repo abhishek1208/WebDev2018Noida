@@ -1,0 +1,48 @@
+git init
+
+git status
+
+git add file1.js
+
+git status
+
+git commit -m "added file1"
+
+git status
+
+git log
+
+
+//To configure user email and password
+
+git config --global user.name "Abhishek"
+git config --global user.email "ay@cb.lk"
+
+
+//For a new brnach
+
+git checkout -b branchname
+
+//switch to a banch
+
+git checkout branchname
+
+//made a new branch feature1
+
+git checkout master
+git checkout -b feature1
+
+//made a new branch bug1 from master
+
+git checkout master
+git branch -b bug1
+
+//Merging branches (bug1 into feature1)
+
+git checkout feature1
+git merge bug1
+
+
+//Pushing code to the remote origin
+
+git push origin master

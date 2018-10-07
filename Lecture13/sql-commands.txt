@@ -1,0 +1,32 @@
+WITHOUT ROOT PASSWORD
+
+mysql -u root
+
+
+WITH ROOT PASSWORD
+
+mysql -u root -p
+(Enter password)
+
+
+CREATING A NEW DATABASE
+
+create database webdevnoida;
+
+CREATING A NEW USER
+
+create user 'myuser' identified by 'mypass';
+
+GRANTING PRIVILEGES
+
+grant all PRIVILEGES ON webdevnoida.* to myuser;
+
+
+LOGGING IN AS NEW USER
+
+mysql -u myuser -p
+(Enter Password)
+
+SWITCHING TO A DATABASE
+
+use webdevnoida;

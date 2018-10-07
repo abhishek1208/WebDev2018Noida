@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+Welcome to my site!
+
+<form action="/pages/persons/" method="post">
+    <input type="text" name="name" placeholder="name" id="nameIp">
+    <input type="text" name="city" placeholder="city" id="cityIp">
+    <input type="number" name="age" placeholder="age" id="ageIp">
+    <input type="submit" id="btn">
+</form>
+
+{{#each persons as |person|}}
+    <p> Name : {{person.name}}</p>
+    <p> City : {{person.city}}</p>
+    <p> Age : {{person.age}}</p>
+    <hr>
+{{/each}}
+
+
+</body>
+</html>

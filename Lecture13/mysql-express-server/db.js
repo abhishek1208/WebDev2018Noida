@@ -21,7 +21,23 @@ function getAllPersons() {
     })
 }
 
+function addNewPerson(name, city, age) {
+    return new Promise(function (resolve, reject) {
+        connection.query(
+            `INSERT INTO persons (name,age,city) VALUES (?,?,?)`,
+            [name, age, city],
+            function (err, results) {
+                if (err) {
+                    reject(err);
+                }
+                resolve(results);
+            }
+        )
+
+    })
+}
 
 module.exports = {
-    getAllPersons
+    getAllPersons,
+    addNewPerson
 }

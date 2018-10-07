@@ -19,4 +19,15 @@ $(function () {
         refreshPage(persons);
     })
 
+    submit.click(function () {
+        $.post('/api/persons',
+            {
+                name: inputName.val(),
+                city: inputCity.val(),
+                age: inputAge.val()
+            },function (data) {
+                refreshPage(data);
+            })
+    })
+
 })

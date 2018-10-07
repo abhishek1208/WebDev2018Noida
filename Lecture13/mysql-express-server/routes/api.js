@@ -21,12 +21,13 @@ route.get('/persons', (req, res) => {
 
 
 route.post('/persons', (req, res) => {
-    persons.push({
-        name: req.body.name,
-        city: req.body.city,
-        age: parseInt(req.body.age)
-    })
-    res.send(persons);
+    db.addNewPerson(req.body.name, req.body.city, parseInt(req.body.age))
+        .then(function () {
+            res.redirect('/api/persons')
+        })
+        .catch(function (err) {
+            res.send(err);
+        })
 })
 
 module.exports = route

@@ -1,0 +1,20 @@
+-- logging in as root user
+
+mysql -u root -p
+(Enter password)
+
+
+-- Creating a new DB
+
+create database studentdb;
+
+
+-- Creating a new user
+
+create user newuser identified by 'newpass';
+
+
+-- granting all privileges on studentdb
+
+
+grant all privileges on studentdb.* to newuser;

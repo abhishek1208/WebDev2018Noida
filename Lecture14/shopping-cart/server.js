@@ -7,9 +7,9 @@ const productRoute = require('./routes/products');
 srv.use(express.json());
 srv.use(express.urlencoded({extended: true}));
 
+srv.use('/public', express.static(__dirname + '/public_html'))
 srv.use('/api/users', userRoute);
 srv.use('/api/products', productRoute);
-
 
 
 srv.listen(1208, () => {

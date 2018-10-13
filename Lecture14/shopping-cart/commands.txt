@@ -1,0 +1,20 @@
+-- logging in as root user
+
+mysql -u root -p
+(Enter password)
+
+
+-- Creating a new DB
+
+create database shopdb;
+
+
+-- Creating a new user
+
+create user shopuser identified by 'shoppass';
+
+
+-- granting all privileges on shopdb
+
+
+grant all privileges on shopdb.* to shopuser;

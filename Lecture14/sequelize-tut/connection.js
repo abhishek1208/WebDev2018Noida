@@ -15,13 +15,13 @@ const Student = db.define('students', {
     }
 })
 
-// Student.create({
-//     name: "Satyndera",
-//     age: 14
-//
-// }).then((student) => {
-//     console.log(student.dataValues.name);
-// }).catch(err => console.log(err))
+Student.create({
+    name: "Satyendra",
+    age: 14
+
+}).then((student) => {
+    console.log(student.dataValues.name);
+}).catch(err => console.log(err))
 
 
 Student.findAll({

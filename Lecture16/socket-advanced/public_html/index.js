@@ -28,6 +28,8 @@ $(function () {
         //Show the message div
         chatDiv.show();
 
+        socket.emit('login', {user: user})
+
     })
 })
 

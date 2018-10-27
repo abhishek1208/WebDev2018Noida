@@ -17,6 +17,4 @@ srv.post('/ctof', function (req, res) {
 
 })
 
-srv.listen(8080, function () {
-    console.log("Server running at http://localhost:8080")
-})
+module.exports = srv;
